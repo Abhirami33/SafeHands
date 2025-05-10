@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/verify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">       <!-- Global styles -->
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left">
+            <h1>SafeHands</h1>
+            <p>Unite for Disaster Recovery<br> Together We Rebuild</p>
+        </div>
+
+        <!-- Right Side: Forms -->
+        <div class="right">
+            <!-- Login Form -->
+            <form id="login-form">
+                <h3 class="text-center">Login</h3>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="********" required>
+                </div>
+                <a href="#" class="small d-block text-end">Forgot password?</a>
+                <button type="submit" class="btn btn-primary w-100 mt-3">LOG IN</button>
+
+                <div class="text-center mt-3">or</div>
+                
+                <button class="btn btn-light w-100 mt-2">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </button>
+
+                <!-- Create Account Link -->
+                <div class="text-center mt-3">
+                    <span>New user?</span> 
+                    <a href="#" id="show-register" class="text-primary fw-bold">Create an Account</a>
+                </div>
+            </form>
+
+            <!-- Register Form (Initially Hidden) -->
+            <form id="register-form" style="display: none;">
+                <h3 class="text-center">Create an Account</h3>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="********" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">REGISTER</button>
+
+                <!-- Login Link -->
+                <div class="text-center mt-3">
+                    <span>Already have an account?</span> 
+                    <a href="#" id="show-login" class="text-primary fw-bold">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script> 
+
+</body>
+</html>

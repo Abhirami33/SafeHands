@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/campaign_bg.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    color: white; /* Change text color to white for better contrast */
+    padding-top: 80px; /* slightly more than navbar height */
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: -1;
+}
+
+/* Campaign Container */
+.campaign-container {
+    display: flex;
+    justify-content: space-between; /* Space out campaigns evenly */
+    flex-wrap: wrap; /* Allow wrapping of campaigns if needed */
+    gap: 20px; /* Space between campaigns */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+/* Campaign Section */
+.campaign {
+    flex: 1 1 5%; /* Each campaign will take up 30% of the container's width */
+    background-color: rgba(29, 28, 28, 0.462); /* Semi-transparent background for campaigns */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(72,150,255,0.8); /* Add shadow for depth */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: auto; /* Adjust height dynamically */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.381); /* Overlay for better text visibility */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 15px rgba(72, 150, 255, 0.8), 0 0 25px rgba(72, 150, 255, 0.6);
+}
+
+.cta-btn {
+    background-color: #e63946; /* Prominent color for Donate Now */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #d62839; /* Darker shade on hover */
+}
+
+/* Campaign Info */
+.campaign-info h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.campaign-info p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.campaign-info img {
+    width: 100%; /* Make image take up full width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures it's above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Modal Content Matches Campaign Spacing */
+.modal-content {
+    background-color: #fdf7f7ae;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%; /* Makes modal responsive */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(82, 151, 242, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh; /* Makes the modal take up to 80% of the viewport height */
+    overflow-y: auto; /* Enables scrolling when content overflows */
+}
+
+
+/* Ensure Image in Modal Matches Campaign */
+.modal-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Match Heading Style */
+.modal-content h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Match Paragraph Spacing */
+.modal-content p {
+    text-align: justify; /* Ensures a clean paragraph structure */
+    word-wrap: break-word; /* Prevents text overflow */
+    line-height: 1.3; /* Adds better readability */
+    margin-bottom: 0px; /* Adds spacing between paragraphs */
+}
+
+
+/* Progress Indicator Styles */
+.progress-indicator {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Progress Indicator Text */
+.progress-indicator p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff; /* Text color for better visibility */
+    margin-bottom: 10px; /* Space between text and progress bar */
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    background-color: #ccc; /* Light gray background for visibility */
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid black; /* Border added for debugging, remove if unnecessary */
+}
+
+/* Progress Fill */
+.progress-fill {
+    background-color: #e63946 !important;
+    height: 100%;
+    border-radius: 5px;
+    width: 50%; /* Temporarily set for testing, remove once JS works */
+    transition: width 1s ease-in-out;
+    display: block;
+}
+
+
+/* Buttons */
+.cta-btn {
+    background-color: #2e8ceb; /* Prominent color for Donate Now */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #aecbf4; /* Darker shade on hover */
+}

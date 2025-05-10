@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaigns | SafeHands</title>
+    <!--Bootstrap & Fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/campaigns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    <!-- Global styles -->
+    <body>
+    <!--Navbar-->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ongoing Campaigns</h1>
+        </div>
+    </section>
+
+    <main class="campaign-container">
+        <!-- Campaign 1 -->
+        <section class="campaign">
+            <div class="campaign-info">
+                <h2>Help Rebuild Homes</h2>
+                <img src="{% static 'images/campaign1_banner.jpg' %}" alt="Campaign Banner 1">
+                
+                <!-- Short Description -->
+                <p>This campaign is dedicated to rebuilding homes for affected families by providing construction materials, financial aid, and essential resources.</p>
+
+                <p><strong>Location:</strong> Assam, India</p>
+                <p><strong>Date:</strong> January 5 - March 20, 2023</p>
+
+                <div class="progress-indicator" data-raised="159000" data-goal="800000">
+                    <p>Funds Raised: ₹1,59,000 / ₹8,00,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <!-- View Details Button -->
+                <button class="cta-btn" id="volunteer-btn-1" onclick="openModal('modal1')">View details</button>
+            </div>
+        </section>
+
+        <!-- Modal Popup -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h2>Help Rebuild Homes</h2>
+                <img src="{% static 'images/campaign1_banner.jpg' %}" alt="Campaign Banner 1">
+                <p>The devastating floods in Assam have displaced thousands of families, leaving them without shelter or basic living conditions. 
+                    Many homes were completely destroyed, forcing families to live in makeshift tents under unsafe conditions.
+                    <br>This campaign is focused on providing construction materials, financial aid, and labor support to rebuild safe and sustainable homes.
+                    <br>With each donation, we move closer to restoring stability and security for these affected communities.
+                    <br>Your support can give families a new beginning and a roof over their heads. Together, we can rebuild lives! ❤️
+                </p>
+                <p><strong>Location:</strong> Assam, India</p>
+                <p><strong>Date:</strong> January 5 - March 20, 2023</p>
+                <!-- New Funding & Participants Section -->
+                <p><strong>Funds Raised:</strong> ₹1,59,000 | <strong>Goal:</strong> ₹8,00,000</p>
+                <p><strong>Participants:</strong> 280+ Volunteers</p>
+                <!-- Additional Details -->
+                <p><strong>Sponsored By:</strong> Habitat for Humanity India</p>
+                <p><strong>Organized By:</strong> Assam Relief Foundation</p>
+                <p><strong>Contact:</strong> rebuild@assamrelief.org | +91 98456 78901</p>
+            </div>
+        </div>
+
+
+        <!-- Campaign 2 -->
+        <section class="campaign">
+            <div class="campaign-info">
+                <h2>Emergency Food Drive</h2>
+                <img src="{% static 'images/campaign2_banner.jpg' %}" alt="Campaign Banner 2">
+                
+                <!-- Short Description -->
+                <p>Thousands of families affected by the floods are in urgent need of food supplies. This campaign ensures they receive essential nutrition during this crisis.</p>
+
+                <p><strong>Location:</strong> Kerala, India</p>
+                <p><strong>Date:</strong> February 1 - April 15, 2023</p>
+
+                <div class="progress-indicator" data-raised="276000" data-goal="450000">
+                    <p>Funds Raised: ₹2,76,000 / ₹4,50,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <!-- View Details Button -->
+                <button class="cta-btn" id="volunteer-btn-2" onclick="openModal('modal2')">View details</button>
+            </div>
+        </section>
+        <!-- Modal Popup -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h2>Emergency Food Drive</h2>
+                <img src="{% static 'images/campaign2_banner.jpg' %}" alt="Campaign Banner 2">
+                <p>The devastating floods in Kerala have left thousands of families struggling for food and essential supplies. 
+                    Many have lost their homes and access to proper nutrition, putting children, elderly, and vulnerable groups at severe risk of malnutrition.
+                    <br>Through this campaign, we aim to distribute emergency food kits containing rice, pulses, cooking oil, dry fruits, and ready-to-eat meals.
+                    <br>Each kit provides sustenance for a family of four for a week, ensuring they have access to nutritious food during these tough times.
+                    <br>Your support can help us reach more families and ensure no one goes hungry. Join us in making a difference today! ❤️
+                </p>
+                <p><strong>Location:</strong> Kerala, India</p>
+                <p><strong>Date:</strong> February 1 - April 15, 2023</p>
+                <!-- New Funding & Participants Section -->
+                <p><strong>Funds Raised:</strong> ₹2,76,000 | <strong>Goal:</strong> ₹4,50,000</p>
+                <p><strong>Participants:</strong> 320+ Volunteers</p>
+                <!-- Additional Details -->
+                <p><strong>Sponsored By:</strong> Kerala Food Relief Trust</p>
+                <p><strong>Organized By:</strong> Kerala Disaster Response Team</p>
+                <p><strong>Contact:</strong> foodrelief@keralahelp.org | +91 98567 43120</p>
+            </div>
+        </div>
+
+        <!-- Campaign 3 -->
+        <section class="campaign">
+            <div class="campaign-info">
+                <h2>Health Kits for Families</h2>
+                <img src="{% static 'images/campaign3_banner.jpg' %}" alt="Campaign Banner 3">
+
+                <!-- Short Description -->
+                <p>Following the devastating floods in Bihar, many families are facing severe health risks due to water contamination and lack of medical supplies.</p>
+
+                <p><strong>Location:</strong> Bihar, India</p>
+                <p><strong>Date:</strong> March 1 - May 1, 2023</p>
+
+                <div class="progress-indicator" data-raised="172000" data-goal="330000">
+                    <p>Funds Raised: ₹1,72,000 / ₹3,30,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <!-- View Details Button -->
+                <button class="cta-btn" id="volunteer-btn-3" onclick="openModal('modal3')">View details</button>
+            </div>
+        </section>
+
+        <!-- Modal Popup -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h2>Health Kits for Families</h2>
+                <img src="{% static 'images/campaign3_banner.jpg' %}" alt="Campaign Banner 3">
+                <p>The Bihar floods of 2020 left over 83 lakh people affected, with many struggling for access to clean water and medical care.
+                    Contaminated water sources led to outbreaks of diseases such as cholera, dengue, and typhoid.
+                    This campaign focuses on distributing health kits containing essential medicines, ORS packets, masks, sanitizers, and first-aid supplies.
+                    By supporting this initiative, you help prevent the spread of diseases and ensure that families receive the medical aid they desperately need.
+                    Your contribution can save lives and protect vulnerable communities from future health crises. ❤️
+                </p>
+                <p><strong>Location:</strong> Bihar, India</p>
+                <p><strong>Date:</strong> March 1 - May 1, 2023</p>
+                 <!-- New Funding & Participants Section -->
+                <p><strong>Funds Raised:</strong> ₹1,72,000 | <strong>Goal:</strong> ₹3,30,000</p>
+                <p><strong>Participants:</strong> 250+ Volunteers</p>
+                <!-- Additional Details -->
+                <p><strong>Sponsored By:</strong> Red Cross India</p>
+                <p><strong>Organized By:</strong> Bihar Relief Network</p>
+                <p><strong>Contact:</strong> relief@biharhelp.org | +91 98765 43210</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="{% static 'js/script.js' %}" defer></script>
+</body>
+</html>

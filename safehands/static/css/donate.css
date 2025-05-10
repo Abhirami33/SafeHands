@@ -1,0 +1,315 @@
+/* donate.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/donation_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f2f2f2;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header.hero {
+    padding: 100px 20px 40px;
+    text-align: center;
+    background: none;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #125899, 0 0 20px #00bfff, 0 0 30px #00bfff;
+}
+
+.cta-button {
+    background-color: #00f7ff;
+    color: #000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00c4cc;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: #00f7ff;
+    margin-bottom: 30px;
+}
+
+/* Our causes */
+.our-causes {
+    background-color: #f7f9fc00;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.our-causes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.causes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cause-card {
+    background: rgba(39, 38, 38, 0.848);
+    border-radius: 15px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cause-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(72, 150, 255, 0.8);
+}
+
+.cause-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cause-card h3 {
+    color: #dbe0e4;
+    margin-bottom: 10px;
+}
+
+.cause-card p {
+    font-size: 0.95rem;
+    color: #fefbfb;
+}
+
+/* donation amount buttons */
+.amount-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.amount-buttons button {
+    background-color: #1a2f2f;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #00f7ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.amount-buttons button.selected,
+.amount-buttons button:hover {
+    background-color: #00f7ff;
+    color: #000;
+}
+
+#custom-amount-container {
+    display: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#custom-amount-container input[type="number"] {
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+#custom-amount-container button {
+    padding: 8px 12px;
+    background-color: #00f7ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: #f2f2f2;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.checkbox input[type="checkbox"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.checkbox label,
+.checkbox span {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #f2f2f2;
+    white-space: nowrap;
+}
+
+/* ✅ Additional input for other resources */
+#other-resources {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00f7ff;
+    border: none;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* success story animation */
+.success-carousel {
+    height: 120px; /* Height of one story */
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+    animation: scrollStories 36s steps(6) infinite; /* 6 steps for 6 stories */
+}
+
+.story {
+    padding: 10px 20px;
+    font-style: italic;
+    color: #333;
+    background: #f0f8ff;
+    border-left: 4px solid #2c7a7b;
+    min-height: 120px; /* Must match container height */
+    box-sizing: border-box;
+}
+
+.story span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #2c7a7b;
+}
+
+/* Keyframes */
+@keyframes scrollStories {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-720px); } /* 120px * 6 stories */
+}
+
+/* Optional pause on hover */
+.success-carousel:hover .carousel-inner {
+    animation-play-state: paused;
+}
+
+
+
+/* Align donation section styling inside form */
+.amount-buttons {
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+#custom-amount-container {
+    margin-bottom: 20px;
+}
+
+.tax-info p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+}

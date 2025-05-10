@@ -1,0 +1,117 @@
+/* Navbar */
+.navbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #0d0f10;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: right;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 100;
+}
+/* Navbar Hover Effect */
+.navbar:hover {
+    background-color: #1a1d1f;
+}
+/* Brand Name Styling */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: white !important;    
+}
+/* Brand Name Hover Effect */
+.navbar-brand:hover {
+    color: rgb(255, 196, 0); /* Golden Yellow */
+    transform: scale(1.1);
+}
+/* Navbar full width */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* Logo Styling */
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%; /* Optional: Makes logo circular */
+    transition: transform 0.3s ease-in-out;
+}
+/* Logo Hover Effect */
+.logo:hover {
+    transform: rotate(360deg);
+}
+/* Centered Nav Links */
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative;
+}
+/* Navbar Links Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 150, 255); /* Changes to blue on hover */
+    transform: scale(1.1);
+}
+/* Underline Animation on Hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: rgb(0, 150, 255);
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+/* Authentication Dropdown Button */
+.auth-btn {
+    background: rgb(0, 150, 255);/* Square box background */
+    font-size: 24px; /* Size of the three-line icon */
+    color: black; /* Ensure text/icon is visible */
+    cursor: pointer;
+    border-radius: 8px; /* Rounded edges */
+    margin-left: 15px;
+    transition: 0.3s ease-in-out;
+}
+/* Hover Effect */
+.auth-btn:hover {
+    background: lightgray;
+}
+/* Dropdown Positioning */
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+/*Footer*/
+footer {
+    background-color: #242425e4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }

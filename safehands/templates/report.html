@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issues - SafeHands</title>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/report.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">        <!-- Global styles -->
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Report Disasters, Save Lives!</h1>
+            <p>Your reports help first responders act quickly.</p>
+        </div>
+    </section>
+
+    <!-- Report Submission Form -->
+    <section id="report-form" class="report-form container mt-5">
+        <h2>Submit a Report</h2>
+        <form>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" id="location" class="form-control" placeholder="Enter location">
+                <button class="btn btn-outline-secondary mt-2">Pick on Map</button>
+            </div>
+            <div class="mb-3">
+                <label for="disaster-type" class="form-label">Type of Disaster</label>
+                <select id="disaster-type" class="form-select">
+                    <option value="" disabled selected>Select Disaster Type</option>
+                    <option value="earthquake">Earthquake</option>
+                    <option value="flood">Flood</option>
+                    <option value="fire">Fire</option>
+                    <option value="hurricane">Hurricane</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea id="description" class="form-control" rows="4" placeholder="Provide details..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="media-upload" class="form-label">Upload Images/Videos</label>
+                <input type="file" id="media-upload" class="form-control" multiple>
+            </div>
+            <button type="submit" class="btn btn-success">Submit Report</button>
+        </form>
+    </section>
+
+    <!-- Live Reports -->
+    <section class="live-reports container mt-5">
+        <h2>Live Reports</h2>
+        <div class="row">
+            <!-- Map View (Placeholder) -->
+            <div class="col-md-6">
+                <div class="map-placeholder">
+                    <p>Map displaying report locations (To be implemented)</p>
+                </div>
+            </div>
+            <!-- List View -->
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">🚨 <strong>Fire in Downtown</strong> - 5 mins ago</li>
+                    <li class="list-group-item">🌊 <strong>Flood Alert in Coastal Area</strong> - 15 mins ago</li>
+                    <li class="list-group-item">🌪 <strong>Tornado Warning Issued</strong> - 30 mins ago</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!--Emergency alerts-->
+    <section class="emergency-alerts container mt-5">
+        <h2>Emergency Alerts</h2>
+        <div id="alert-container"></div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

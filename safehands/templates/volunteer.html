@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | SafeHands</title>
+    <!--Bootstrap & Fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/volunteer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">      <!-- Global styles -->
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Join Our Volunteer Network!</h1>
+            <a href="#signup" class="cta-btn">Sign Up as a Volunteer</a>
+        </div>
+    </section>
+
+    <!-- Volunteer Opportunities Section -->
+    <section class="volunteer-opportunities">
+        <h2>Volunteer Opportunities</h2>
+        <div class="grid-container">
+            <div class="role">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Rescue</h3>
+                <p>Help in search and rescue operations. Skills needed: Basic First Aid, team coordination.</p>
+            </div>
+            <div class="role">
+                <i class="fa-solid fa-kit-medical"></i>
+                <h3>Medical Aid</h3>
+                <p>Provide medical care to affected individuals. Skills needed: Medical training, first aid, CPR.</p>
+            </div>
+            <div class="role">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Food Distribution</h3>
+                <p>Assist in distributing food to those in need. Skills needed: Organization, patience, and stamina.</p>
+            </div>
+            <div class="role">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Logistics</h3>
+                <p>Support in managing supplies and equipment. Skills needed: Logistics coordination, resource management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="timeline">
+            <div class="timeline-step">
+                <h3>1. Sign Up</h3>
+                <p>Register to become a volunteer by filling out the sign-up form.</p>
+            </div>
+            <div class="timeline-step">
+                <h3>2. Get Assigned</h3>
+                <p>After registration, get assigned a role based on your profile.</p>
+            </div>
+            <div class="timeline-step">
+                <h3>3. Ground Support</h3>
+                <p>Join your assigned team and assist in relief efforts.</p>
+            </div>
+            <div class="timeline-step">
+                <h3>4. Get Certified</h3>
+                <p>Recieve volunteering certificate after completion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Volunteer Stories</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="{% static 'images/volunteer_1.png' %}" alt="Volunteer Photo">
+                <blockquote>
+                    "Volunteering with SafeHands gave me the opportunity to make a real impact in my community. It was an unforgettable experience."
+                </blockquote>
+                <p>- John Doe, Rescue Volunteer</p>
+            </div>
+    
+            <div class="testimonial">
+                <img src="{% static 'images/volunteer_2.png' %}" alt="Volunteer Photo">
+                <blockquote>
+                    "I met amazing people while helping those in need. It truly changed my perspective on life!"
+                </blockquote>
+                <p>- Jane Smith, Medical Aid Volunteer</p>
+            </div>
+    
+            <div class="testimonial">
+                <img src="{% static 'images/volunteer_3.png' %}" alt="Volunteer Photo">
+                <blockquote>
+                    "Being a part of SafeHands made me realize how small actions can create big changes."
+                </blockquote>
+                <p>- David Lebron, Logistics Coordinator</p>
+            </div>
+    
+            <div class="testimonial">
+                <img src="{% static 'images/volunteer_4.png' %}" alt="Volunteer Photo">
+                <blockquote>
+                    "Helping families rebuild after disasters was the most rewarding experience of my life."
+                </blockquote>
+                <p>- Emily Carter, Relief Worker</p>
+            </div>
+        </div>
+    </section>
+    <!-- Sign Up Form Section -->
+    <section id="signup" class="signup-form">
+        <h2>Sign Up as a Volunteer</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="contact">Contact (Phone/Email):</label>
+            <input type="text" id="contact" name="contact" required>
+    
+            <label for="skills">Skills:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="first-aid" name="skills" value="First Aid">
+                <label for="first-aid">First Aid</label>
+    
+                <input type="checkbox" id="logistics" name="skills" value="Logistics">
+                <label for="logistics">Logistics</label>
+    
+                <input type="checkbox" id="medical" name="skills" value="Medical Aid">
+                <label for="medical">Medical Aid</label>
+    
+                <input type="checkbox" id="food-distribution" name="skills" value="Food Distribution">
+                <label for="food-distribution">Food Distribution</label>
+            </div>
+    
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" name="availability" placeholder="e.g., April 1st - 15th" required>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+
+    <script src="{% static 'js/script.js' %}"></script>   
+</body>
+</html>

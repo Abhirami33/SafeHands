@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Safe Hands</title>
+    <!--Bootstrap & Fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/donate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">        <!-- Global styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div id="navbar-placeholder"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Your Generosity Can Save Lives.</h1>
+            <a href="#donation-form" class="cta-button">Donate Now</a>
+        </div>
+    </header>
+
+    <section class="our-causes">
+        <h2>What Your Donations Support</h2>
+        <div class="causes-container">
+            <div class="cause-card">
+                <img src="{% static 'images/cause_food.png' %}" alt="Food & Water" class="cause-image">
+                <h3>Food & Water</h3>
+                <p>Provide nutritious meals and safe drinking water to families affected by disasters and crises.</p>
+            </div>
+            <div class="cause-card">
+                <img src="{% static 'images/medical.png' %}" alt="Medical Aid" class="cause-image">
+                <h3>Medical Aid</h3>
+                <p>Supply emergency kits, medicines, and first aid to injured or sick individuals in affected areas.</p>
+            </div>
+            <div class="cause-card">
+                <img src="{% static 'images/cause_shelter.png' %}" alt="Shelter & Warmth" class="cause-image">
+                <h3>Shelter & Warmth</h3>
+                <p>Distribute blankets, clothing, and temporary shelter for those displaced by natural disasters.</p>
+            </div>
+            <div class="cause-card">
+                <img src="{% static 'images/cause_child.png' %}" alt="Children & Education" class="cause-image">
+                <h3>Children & Education</h3>
+                <p>Support displaced children with learning spaces and school essentials to continue their education.</p>
+            </div>
+            <div class="cause-card">
+                <img src="{% static 'images/cause_dignity.png' %}" alt="Hygiene & Dignity" class="cause-image">
+                <h3>Hygiene & Dignity</h3>
+                <p>Provide hygiene kits, sanitary supplies, and support to help families stay safe and dignified.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="success-carousel">
+            <div class="carousel-inner">
+                <div class="story"><p>"Thanks to your support, over 500 families in Kerala received food and shelter during the 2023 floods."</p>
+                    <span>- Disaster Relief Team</span></div>
+                <div class="story"><p>"Medical kits donated helped prevent major disease outbreaks in Bihar after the floods. You made it possible."</p>
+                    <span>- Medical Aid Unit</span></div>
+                <div class="story"><p>"SafeHands volunteers distributed over 2000 hygiene kits in West Bengal, helping prevent illness in relief camps."</p>
+                    <span>- Public Health Coordinator</span></div>
+                <div class="story"><p>"The blankets and clothes you donated kept hundreds warm during the winter storms in Himachal Pradesh."</p>
+                    <span>- Cold Relief Program</span></div>
+                <div class="story"><p>"With your generous contributions, we built temporary learning centers for children in flood-hit Assam."</p>
+                    <span>- Education Outreach Team</span></div>
+                <div class="story"><p>"Tents and clean water supplies reached over 1,000 people affected by the cyclone in Odisha, thanks to you."</p>
+                    <span>- Emergency Response Unit</span></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="donation-form" id="donation-form">
+        <h2>Donation Form</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Select Donation Amount</label>
+            <div class="amount-buttons">
+                <button type="button" data-amount="100">₹100</button>
+                <button type="button" data-amount="250">₹250</button>
+                <button type="button" data-amount="500">₹500</button>
+                <button type="button" data-amount="1000">₹1000</button>
+                <button type="button" data-amount="custom" id="custom-btn">Other</button>
+            </div>
+
+            <div id="custom-amount-container">
+                <input type="number" id="custom-amount" placeholder="Enter amount" min="1" step="1" />
+            </div>
+
+            <label for="amount">Amount (Rs.)</label>
+            <input type="number" id="amount" name="amount" required readonly>
+
+            <label for="method">Payment Method</label>
+            <select id="method" name="method" required>
+                <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="paypal">PayPal</option>
+                <option value="gpay">Google Pay</option>
+                <option value="phonepe">PhonePe</option>
+                <option value="netbanking">Net Banking</option>
+            </select>
+
+            <label for="resources">Donate Items/Resources</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="resources" value="clothes"> Clothes</label>
+                <label><input type="checkbox" name="resources" value="food"> Food</label>
+                <label><input type="checkbox" name="resources" value="medicine"> Medicines</label>
+                <label><input type="checkbox" name="resources" value="blankets"> Blankets</label>
+                <label><input type="checkbox" name="resources" value="hygiene"> Hygiene Kits</label>
+                <label><input type="checkbox" name="resources" value="stationery"> Stationery</label>
+            </div>
+            <label for="other-resources">Other items you'd like to donate</label>
+            <input type="text" id="other-resources" name="other-resources" placeholder="e.g., water bottles, tents">
+
+            <div class="checkbox">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <label for="anonymous">Make my donation anonymous</label>
+            </div>
+
+            <button type="submit">Submit Donation</button>
+        </form>
+    </section>   
+
+    <div id="footer-placeholder"></div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

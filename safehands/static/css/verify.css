@@ -1,0 +1,83 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/verify_bg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow: hidden;
+}
+
+/* Left Side */
+.left {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.left p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+/* Right Side */
+.right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: #007bff;
+    border: none;
+    font-weight: bold;
+}
+
+.toggle-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.toggle-link a {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hide Register Form Initially */
+#register-form {
+    display: none;
+}
